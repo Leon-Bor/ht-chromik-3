@@ -13,10 +13,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - No clean code
 - With sounds!
 
-<img src="https://raw.githubusercontent.com/Leon-Bor/ht-chromik-3/main/src/assets/screen-1.png" width="256"/>
-<img src="https://raw.githubusercontent.com/Leon-Bor/ht-chromik-3/main/src/assets/screen-2.png" width="256"/>
-<img src="https://raw.githubusercontent.com/Leon-Bor/ht-chromik-3/main/src/assets/screen-3.png" width="256"/>
-<img src="https://raw.githubusercontent.com/Leon-Bor/ht-chromik-3/main/src/assets/screen-4.png" width="256"/>
+<img src="https://raw.githubusercontent.com/Leon-Bor/ht-chromik-3/main/src/assets/screen-1.jpg" width="256"/>
 
 ### Development server
 
@@ -24,4 +21,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ### Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng build` to build the project. The build artifacts will be stored in the `docs/` directory.
