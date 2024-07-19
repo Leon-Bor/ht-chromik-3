@@ -35,6 +35,7 @@ h2 {
   gap: 10px;
   padding-bottom: 50px;
   .movie {
+    position: relative;
     background-color: rgb(0, 166, 255);
     border-radius: 5px;
     padding: 10px;
@@ -124,4 +125,26 @@ h2 {
   border: 0;
   transform: rotate(-25deg);
   cursor: pointer;
+  border: 3px solid white;
+}
+
+
+.correct-answer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  z-index: 900;
+  font-size: 10px;
+  color: white;
+  font-weight: 800;
+  background-color: rgb(0, 159, 19);
+  border: 0;
+  transform: rotate(25deg); z-index: 1010;
+  border: 3px solid white;
 }
