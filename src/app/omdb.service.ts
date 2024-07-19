@@ -21,7 +21,7 @@ export class OmdbService {
   }
 
   protected getRandomWord() {
-    return generate({ minLength: 5, maxLength: 10 });
+    return generate({ minLength: 3, maxLength: 10 });
   }
 
   getMovieDetails(imdbID: string) {
