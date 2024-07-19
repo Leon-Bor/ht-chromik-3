@@ -14,7 +14,7 @@ export class OmdbService {
   getMovies() {
     console.log('getMovies');
     return this.http.get(
-      `http://www.omdbapi.com/?s=${this.getRandomWord()}&apikey=${
+      `https://www.omdbapi.com/?s=${this.getRandomWord()}&apikey=${
         this.apiKey
       }&type=${this.type}&plot=short&r=json`
     );
@@ -26,7 +26,7 @@ export class OmdbService {
 
   getMovieDetails(imdbID: string) {
     return this.http.get(
-      `http://www.omdbapi.com/?i=${imdbID}&apikey=${this.apiKey}&plot=short&r=json`
+      `https://www.omdbapi.com/?i=${imdbID}&apikey=${this.apiKey}&plot=short&r=json`
     );
   }
 }
