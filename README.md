@@ -10,6 +10,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Mobile first
 - No clean code
 
+![alt text](https://raw.githubusercontent.com/Leon-Bor/ht-chromik-3/main/src/assets/screen-1.png)
+![alt text](https://raw.githubusercontent.com/Leon-Bor/ht-chromik-3/main/src/assets/screen-2.png)
+![alt text](https://raw.githubusercontent.com/Leon-Bor/ht-chromik-3/main/src/assets/screen-3.png)
+![alt text](https://raw.githubusercontent.com/Leon-Bor/ht-chromik-3/main/src/assets/screen-4.png)
+
 ### Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
