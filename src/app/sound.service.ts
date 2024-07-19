@@ -8,7 +8,7 @@ export class SoundService {
 
   playSound(name: string, volume: number = 1) {
     let audio = new Audio();
-    audio.src = `../assets/audio/${name}.wav`;
+    audio.src = `https://leon-bor.github.io/ht-chromik-3/assets/audio/${name}.wav`;
     audio.load();
     audio.volume = volume;
     audio.play();
