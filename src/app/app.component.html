@@ -1,0 +1,74 @@
+<div class="container" *ngIf="quizStatus.value !== 'finished'">
+  <h1 *ngIf="quizStatus.value === 'loading'">
+    Choose the right<br />
+    movie!
+  </h1>
+
+  <div class="hints" *ngIf="movieDetails" class="{{ quizStatus.value }}">
+    <p *ngIf="hintLevel > -1">{{ movieDetails.Plot }}</p>
+    <p *ngIf="hintLevel > 0">
+      The movie is from the year {{ movieDetails.Year }} and has a rating of
+      {{ movieDetails.imdbRating }}.
+    </p>
+
+    <p *ngIf="hintLevel > 1">
+      The director was {{ movieDetails.Director }} and the movie is made in
+      {{ movieDetails.Country }}.
+    </p>
+  </div>
+  <div class="movies" *ngIf="movieDetails">
+    @for (movie of movies; track movie; let i = $index) {
+    <div
+      class="movie"
+      [ngClass]="{
+        selected: choosenAnswer === i,
+        correct: choosenAnswer === i && quizStatus.value === 'correct',
+        incorrect: choosenAnswer === i && quizStatus.value === 'incorrect'
+      }"
+      (click)="chooseAnswer(i)"
+    >
+      <img class="poster" src="{{ movie.Poster }}" alt="{{ movie.Title }}" />
+      <!-- <div
+        class="poster"
+        [style]="{ backgroundImage: 'url(' + movie.Poster + ')' }"
+      ></div> -->
+      <!-- <h3>{{ movie.Title }}</h3>
+      <p>{{ movie.Year }}</p> -->
+    </div>
+    }
+  </div>
+  <div class="actions">
+    <button
+      (click)="submitAnswer()"
+      class="{{ choosenAnswer === undefined ? 'disabled' : '' }} {{
+        quizStatus.value
+      }}"
+    >
+      Next
+    </button>
+  </div>
+
+  <button
+    (click)="increaseHintLevel()"
+    class="hint-button"
+    *ngIf="quizStatus.value === 'thinking' && hintLevel !== 2"
+  >
+    ANOTHER <br />HINT!
+  </button>
+</div>
+
+<div class="container" *ngIf="quizStatus.value === 'finished'">
+  <h1>
+    Score<br />
+    {{ this.score }}
+  </h1>
+
+  <h2>
+    Highscore<br />
+    {{ getHighscore() }}
+  </h2>
+
+  <div class="actions">
+    <button (click)="tryAgain()">Try again!</button>
+  </div>
+</div>
