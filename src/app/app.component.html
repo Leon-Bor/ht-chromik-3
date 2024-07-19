@@ -1,19 +1,27 @@
+<div class="container">
+  <img class="logo" src="assets/logo.png" alt="Logo" class="logo" />
+</div>
+
 <div class="container" *ngIf="quizStatus.value !== 'finished'">
   <h1 *ngIf="quizStatus.value === 'loading'">
     Choose the right<br />
     movie!
+
+    <div class="loader"></div>
   </h1>
 
   <div class="hints" *ngIf="movieDetails" class="{{ quizStatus.value }}">
-    <p *ngIf="hintLevel > -1">{{ movieDetails.Plot }}</p>
+    <p *ngIf="hintLevel > -1">
+      {{ movieDetails.Plot }} <span class="deco">?</span>
+    </p>
     <p *ngIf="hintLevel > 0">
       The movie is from the year {{ movieDetails.Year }} and has a rating of
-      {{ movieDetails.imdbRating }}.
+      {{ movieDetails.imdbRating }}.<span class="deco">?</span>
     </p>
 
     <p *ngIf="hintLevel > 1">
       The director was {{ movieDetails.Director }} and the movie is made in
-      {{ movieDetails.Country }}.
+      {{ movieDetails.Country }}.<span class="deco">?</span>
     </p>
   </div>
   <div class="movies" *ngIf="movieDetails">
@@ -42,11 +50,11 @@
   <div class="actions">
     <button
       (click)="submitAnswer()"
-      class="{{ choosenAnswer === undefined ? 'disabled' : '' }} {{
+      class="button-29 {{ choosenAnswer === undefined ? 'disabled' : '' }} {{
         quizStatus.value
       }}"
     >
-      Next
+      CHECK
     </button>
   </div>
 
@@ -55,7 +63,7 @@
     class="hint-button"
     *ngIf="quizStatus.value === 'thinking' && hintLevel !== 2"
   >
-    ANOTHER <br />HINT!
+    NEED<br />ANOTHER<br />HINT!
   </button>
 </div>
 
@@ -71,6 +79,6 @@
   </h2>
 
   <div class="actions">
-    <button (click)="tryAgain()">Try again!</button>
+    <button class="button-29" (click)="tryAgain()">Try again!</button>
   </div>
 </div>
