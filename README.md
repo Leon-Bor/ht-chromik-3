@@ -13,7 +13,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - No clean code
 - With sounds!
 
-<img src="https://raw.githubusercontent.com/Leon-Bor/ht-chromik-3/main/src/assets/screen-1.jpg" width="256"/>
+<img src="https://raw.githubusercontent.com/Leon-Bor/ht-chromik-3/main/src/assets/screen-3.jpg" width="256"/>
 
 ### Development server
 
