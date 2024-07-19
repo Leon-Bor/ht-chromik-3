@@ -5,7 +5,7 @@ Try to beat your highscore.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
 
-<h1><a href="">LIVE DEMO</a></h1>
+<h1><a href="">--> LIVE DEMO</a></h1>
 
 ##
 
