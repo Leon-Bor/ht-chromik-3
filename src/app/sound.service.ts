@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class SoundService {
   constructor() {}
 
-  playSound(name: string, volume: number = 1) {
+  playSound(name: string, volume: number = 0.5) {
     let audio = new Audio();
     audio.src = `https://leon-bor.github.io/ht-chromik-3/assets/audio/${name}.wav`;
     audio.load();
