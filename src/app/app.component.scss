@@ -6,8 +6,10 @@
   gap: 10px;
   justify-content: space-between;
   margin: auto 0;
-  padding-left: 10px;
-  padding-right: 10px;
+  > * {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 .logo {
@@ -68,11 +70,9 @@ h2 {
   left: 50%;
   z-index: 1000;
   transform: translateX(-50%);
-  width: calc(100% - 20px);
+  width: 100%;
   max-width: 600px;
   padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 .hints {
@@ -82,8 +82,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  overflow: hidden;
   p {
     border-radius: 10px;
     padding: 10px 10px;
@@ -93,13 +92,16 @@ h2 {
     border: 3px solid white;
     position: relative;
 
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     span {
       position: absolute;
-      right: -10px;
-      bottom: -20px;
-      transform: rotate(25deg);
+      right: 20px;
+      bottom: -5px;
+      transform: rotate(25deg) translateX(33px);
       font-size: 60px;
       text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.6);
+      z-index: 1000;
     }
   }
 
