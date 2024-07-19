@@ -1,7 +1,6 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { AiService } from './ai.service';
 import { OmdbService } from './omdb.service';
 import { SoundService } from './sound.service';
 
@@ -29,7 +28,7 @@ export enum QuizStatus {
   imports: [NgFor, NgIf, NgClass],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  providers: [OmdbService, AiService, SoundService],
+  providers: [OmdbService, SoundService],
 })
 export class AppComponent {
   title = 'hackathon-chromik-3';
@@ -47,7 +46,6 @@ export class AppComponent {
 
   constructor(
     protected omdbService: OmdbService,
-    protected aiService: AiService,
     protected soundService: SoundService
   ) {
     this.getNextQuestion();
@@ -73,13 +71,6 @@ export class AppComponent {
 
       this.rightAnswer = this.getRandomNumberBetween(0, 3);
 
-      // ? Would need a better API key with more requests
-      // this.aiService
-      //   .getMovieScene(this.movies[this.rightAnswer].Title)
-      //   .subscribe((data: any) => {
-      //     console.log(data);
-      //   });
-
       this.omdbService
         .getMovieDetails(this.movies[this.rightAnswer].imdbID)
         .subscribe((data: any) => {
@@ -90,8 +81,6 @@ export class AppComponent {
           this.quizStatus.next(QuizStatus.Thinking);
           console.log(data);
         });
-
-      console.log(this.movies);
     });
   }
 

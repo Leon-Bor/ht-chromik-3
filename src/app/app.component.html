@@ -28,12 +28,7 @@
       (click)="chooseAnswer(i)"
     >
       <img class="poster" src="{{ movie.Poster }}" alt="{{ movie.Title }}" />
-      <!-- <div
-        class="poster"
-        [style]="{ backgroundImage: 'url(' + movie.Poster + ')' }"
-      ></div> -->
-      <!-- <h3>{{ movie.Title }}</h3>
-      <p>{{ movie.Year }}</p> -->
+
       <div
         class="correct-answer"
         *ngIf="quizStatus.value === 'incorrect' && rightAnswer === i"
