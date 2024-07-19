@@ -177,7 +177,7 @@ export class AppComponent {
       localStorage.setItem('highscore', this.score.toString());
     } else {
       if (this.score > parseInt(highscore)) {
-        this.soundService.playSound('highscore');
+        this.soundService.playSound('new-highscore');
         localStorage.setItem('highscore', this.score.toString());
       } else {
         this.soundService.playSound('loose');
