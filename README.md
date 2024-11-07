@@ -1,4 +1,4 @@
-# HackathonChromik3
+# Quiz App build with angular
 
 Simple quiz game where you have to guess the right movie cover from given hints.
 Try to beat your highscore.
